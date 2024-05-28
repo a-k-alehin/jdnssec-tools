@@ -42,7 +42,7 @@ import com.verisignlabs.dnssec.security.ZoneUtils;
  * This class forms the command line implementation of a DNSSEC keyset signer.
  * Instead of being able to sign an entire zone, it will just sign a given
  * DNSKEY RRset.
- * 
+ *
  * @author David Blacka
  */
 public class SignKeyset extends CLBase {
@@ -88,9 +88,9 @@ public class SignKeyset extends CLBase {
       String optstr = null;
 
       verifySigs = cliBooleanOption("a", verifyOptionKeys, false);
-      
-      String keyDirectoryName = cliOption("D", keyDirectoryOptionKeys, null);
-      if (keyDirectoryName != null) {
+
+      optstr = cliOption("D", keyDirectoryOptionKeys, null);
+      if (optstr != null) {
         keyDirectory = new File(optstr);
         if (!keyDirectory.isDirectory()) {
           fail("key directory " + optstr + " is not a directory");

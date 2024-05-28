@@ -54,3 +54,13 @@ As of version 0.20, there is a one-jar (aka an executable jar) as part of the di
 ---
 
 Questions or comments may be directed to the author (<mailto:davidb@verisign.com>), or by creating issues in the [github issue tracker](https://github.com/dblacka/jdnssec-tools/issues).
+
+---
+
+### Maven build
+
+    export JAVA_HOME=<path>/java-17
+    mvn clean compile assembly:single
+    $JAVA_HOME/bin/java -jar target/jdnssec-tools.jar signzone -h
+
+

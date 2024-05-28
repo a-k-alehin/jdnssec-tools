@@ -1,3 +1,8 @@
+2024-05-28  Alexander Alekhin <a.k.alehin@gmail.com>
+
+        * Maven build
+        * fix SignKeyset.java
+
 2024-04-07  David Blacka  <david@blacka.com>
 
         * Released version 0.20
