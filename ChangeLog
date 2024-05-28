@@ -1,3 +1,7 @@
+2024-05-27  Alexander Alekhin <a.k.alehin@gmail.com>
+
+        * Version 0.13.1 for Java 1.6
+
 2017-06-22  Peter van Dijk <peter.van.dijk@powerdns.com>, Kees Monshouwer <mind04@monshouwer.eu>
 
         * Fix leading zero(s) padding in ECDSA sig conversion

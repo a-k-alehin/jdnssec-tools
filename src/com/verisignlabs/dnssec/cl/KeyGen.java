@@ -28,7 +28,7 @@ import com.verisignlabs.dnssec.security.*;
 
 /**
  * This class forms the command line implementation of a DNSSEC key generator
- * 
+ *
  * @author David Blacka
  */
 public class KeyGen extends CLBase
@@ -39,7 +39,7 @@ public class KeyGen extends CLBase
    * This is a small inner class used to hold all of the command line option
    * state.
    */
-  protected static class CLIState extends CLIStateBase 
+  protected static class CLIState extends CLIStateBase
   {
     public int      algorithm  = 8;
     public int      keylength  = 1024;
@@ -77,8 +77,10 @@ public class KeyGen extends CLBase
       String[] algStrings = DnsKeyAlgorithm.getInstance().supportedAlgMnemonics();
       OptionBuilder.hasArg();
       OptionBuilder.withArgName("algorithm");
-      OptionBuilder.withDescription(String.join(" | ", algStrings) +
-                                    " | alias, RSASHA256 is default.");
+      StringBuilder sb = new StringBuilder();
+      for (int i = 0; i < algStrings.length; ++i)
+        sb.append(algStrings[i]).append(" | ");
+      OptionBuilder.withDescription(sb.toString() + "alias, RSASHA256 is default.");
       opts.addOption(OptionBuilder.create('a'));
 
       OptionBuilder.hasArg();
